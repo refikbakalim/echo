@@ -9,7 +9,6 @@
       <input name="usermsg" type="text" id="usermsg" />
       <input name="submitmsg" type="button" id="submitmsg" value="Send" onclick="msg()" />
     </form>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {});
       function msg() {
@@ -26,6 +25,7 @@
         }
         request.open('POST', 'echo');
         request.send(mydata);
+        document.getElementsByName("message")[0].reset();
       }
     </script>      
   </body>
