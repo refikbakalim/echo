@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <head>
+    <title>Chat Application</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  </head>
+  <body>
+    <div id="chatbox"></div>
+    <form name="message" action="" method="POST" id="message">
+      <input name="usermsg" type="text" id="usermsg" />
+      <input name="submitmsg" type="button" id="submitmsg" value="Send" onclick="msg()" />
+    </form>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {});
+      function msg() {
+        let value = document.getElementById("usermsg").value;
+        let mydata =  new FormData();
+        mydata.append("usermsg", value);
+
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == XMLHttpRequest.DONE) {
+                let responsevalue = request.responseText;
+                document.getElementById("chatbox").innerHTML = document.getElementById("chatbox").innerHTML + "<br/>" + responsevalue;
+            }
+        }
+        request.open('POST', 'echo');
+        request.send(mydata);
+      }
+    </script>      
+  </body>
+</html>
