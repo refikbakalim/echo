@@ -4,6 +4,8 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
   </head>
   <body>
+    <h1>Web Chat Application</h1>
+    <h2>Write your message and press to the button</h2>
     <div id="chatbox"></div>
     <form name="message" action="" method="POST">
       <input name="usermsg" type="text" id="usermsg" />
@@ -15,7 +17,6 @@
         let value = document.getElementById("usermsg").value;
         let mydata =  new FormData();
         mydata.append("usermsg", value);
-
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {
             if (request.readyState == XMLHttpRequest.DONE) {
@@ -27,6 +28,6 @@
         request.send(mydata);
         document.getElementsByName("message")[0].reset();
       }
-    </script>      
+    </script> 
   </body>
 </html>
