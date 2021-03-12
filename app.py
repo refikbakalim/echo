@@ -9,8 +9,6 @@ def index():
 @app.route('/echo', methods=['POST'])
 def echo():
     message = request.form["usermsg"]
-    if message == '':
-        message = "Empty Message"
     return message
 
 if __name__ == '__main__':
