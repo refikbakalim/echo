@@ -30,7 +30,7 @@
         request.onreadystatechange = function() {
             if (request.readyState == XMLHttpRequest.DONE) {
                 let responsevalue = request.responseText;
-                document.getElementById("chatbox").innerHTML = document.getElementById("chatbox").innerHTML + "<br/>" + responsevalue;
+                document.getElementById("chatbox").innerHTML = document.getElementById("chatbox").innerHTML + '<div class="bubble"><p>'+ responsevalue + '</p></div>'+ "<br>"  ;
             }
         }
         request.open('POST', 'echo');
