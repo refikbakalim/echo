@@ -1,12 +1,65 @@
+*:focus {
+  outline: 0;
+}
+
 #chatbox {
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding: 10px;
-  background: #fff;
+  background: rgb(216, 216, 216);
   height: 300px;
-  width: 530px;
+  width: 550px;
   border: 1px solid #a7a7a7;
   overflow: auto;
   border-radius: 4px;
   border-bottom: 4px solid #a7a7a7;
+  box-sizing:border-box;
+}
+
+body {
+  background-color: rgb(45, 62, 80);
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  color: rgb(215, 230, 16);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#usermsg {
+  width:466px;
+  padding:5px;
+  box-sizing:border-box;
+  border: 3px solid #a7a7a7;
+  border-radius:10px;
+}
+#usermsg:focus {
+  border-color:  rgb(70, 70, 70);
+}
+
+#submitmsg {
+  width:80px;
+  height: 30px;
+  box-sizing:border-box;
+  border: 2px solid #a7a7a7;
+  border-radius:7px;
+  background-color:rgb(255, 255, 255);
+}
+#submitmsg:hover {
+  border-color:  #414141;
+  background-color:rgb(255, 255, 255);
+}
+
+#submitmsg:focus {
+  border-color:  #414141;
+  background-color:rgb(175, 175, 175);
 }
