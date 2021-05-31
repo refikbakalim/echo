@@ -6,5 +6,5 @@ Simple chat application that takes the message from client to server and echoes 
 ## How to use
 1. Install Python
 2. Install Flask environment
-3. Write "py app.py" in console
+3. Write "py app.py" in terminal
 4. Go to "127.0.0.1:5000" in your browser
